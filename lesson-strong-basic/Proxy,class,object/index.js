@@ -8,9 +8,9 @@ const op = new Proxy(person, {
     get(target, prop) {
         console.log(`getting prop ${prop}`)
         if (!(prop in taret)) {
-           return prop.split('_').map(p => {
-               target[p].join(' ')
-           })
+            return prop.split('_').map(p => {
+                target[p].join(' ')
+            })
         }
         return target[prop]
     },
@@ -61,3 +61,44 @@ const PersonProxy = new Proxy(Repson, {
     }
 })
 const p = new PersonProxy('maxim', 30)
+
+// practics proxy
+
+
+const withDefaultValue = (target, defaultValue = 0) => {
+    return new Proxy(target, {
+        get: (obj, prop) => (prop in obj) ? obj[prop] : defaultValue
+    })
+}
+const position = withDefaultValue({
+    x: 24,
+    y: 42,
+
+}, 0)
+// hidden properties
+const withHiddenProps = (target, prefix = '_') => {
+    return new Proxy(target, {
+        has: (obs, prop) => (prop in obj) && (!prop.startsWith(prefix)),
+        ownKeys: obj => Reflect.ownKeys(obj).filter(p => !p.startsWith(prefix)),
+        get: (obj, prop, receiver) => (prop in receiver) ? obj[prop] : void 0
+    })
+}
+// optimization
+const IndedArray = new Proxy(Array, {
+    construct(target, [argArray]) {
+        const index = {}
+        args.forEach(item => (index[item.id] = item))
+
+        return new target(...args), {
+            get(arr, prop) {
+                switch (prop) {
+                    case 'push': return item => {
+                        arr[prop].call(arr,item)
+                    }
+                    default: return arr[prop]
+                }
+            }
+        }
+    }
+})
+console
