@@ -3,5 +3,5 @@
 // import './subject'
 // import './operators'
 // import './example-github'
-
-import './canvas'
+// import './canvas'
+import './redux'
