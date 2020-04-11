@@ -1,53 +1,19 @@
-console.log('Request data...')
+const cityU = ['lviv', 'kiev', 'odessa']
+const cityE = ['praha', 'dort', 'paris']
+
+// function f() {
+//     const m = []
 //
-// setTimeout(() => {
-//     console.log('preparing data')
-//     const back = {
-//         server: 'aws',
-//         porst: 2000,
-//         status: 'ok'
-//     }
-//     setTimeout(() => {
-//         back.modified = true
-//         console.log('Data recevied', back)
-//     }, 2000)
-// }, 2000)
-
-// const p = new Promise(function (resolve, reject) {
-//     setTimeout(() => {
-//         console.log('preparing data')
-//         const back = {
-//             server: 'aws',
-//             porst: 2000,
-//             status: 'ok'
-//         }
-//         resolve(back)
-//     }, 2000)
-// })
-// p.then((data) => {
-//     const p2 = new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             data.modified = true
-//             resolve(data)
-//         }, 2000)
+//     cityE.map(t => {
+//         let d = t + 'false'
+//         m.push(d)
+//
 //     })
-// }).then(data1 => {
-//     data1.fromMy = true
-//     return data1
-// }).then(data2 => {
-//     console.log('data2', data2)
-// })
-//     .catch(err => console.log('error', err))
-//     .finally(() => console.log('finaly'))
+//     console.log(m)
+// }
+// f()
 
-const sleep = ms => {
-    return new Promise(resolve => {
-        setTimeout(() => resolve(), ms)
-    })
-}
+const allCiti = [...cityE, ...cityU]
+console.log(allCiti)
 
-// sleep(2000).then(() => console.log('after to seconds'))
-Promise.all([sleep(2000), sleep(3000)])
-    .then(() => {
-        console.log('finish')
-    })
+Math.max(5,37,42,17)
