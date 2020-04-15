@@ -27,8 +27,35 @@
 // if ( currentUser || defaultUser) {
 //     console.log('true')
 // }
-let hour = 12;
-let minute = 30;
+// let hour = 12;
+// let minute = 30;
+//
+// if (hour == 11 && minute == 30) {
+//     console.log('true')}
+// let a = 2 + 2;
+//
+// switch (a) {
+//     case 3:
+//         console.log('1' );
+//         break;
+//     case 4:
+//         console.log('2!' );
+//         break;
+//     case 5:
+//         console.log('3' );
+//         break;
+//     default:
+//         console.log('4' );
+// }
+let a = 2 + 2;
 
-if (hour == 11 && minute == 30) {
-    console.log('true')}
+switch (a) {
+    case 3:
+        console.log( '1' );
+    case 4:
+        console.log( '2!' );
+    case 5:
+        console.log( '3' );
+    default:
+        console.log( '4' );
+}
