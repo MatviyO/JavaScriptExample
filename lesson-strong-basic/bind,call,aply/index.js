@@ -47,15 +47,19 @@
 //     default:
 //         console.log('4' );
 // }
-let a = 2 + 2;
-
-switch (a) {
-    case 3:
-        console.log( '1' );
-    case 4:
-        console.log( '2!' );
-    case 5:
-        console.log( '3' );
-    default:
-        console.log( '4' );
-}
+// let a = 2 + 2;
+//
+// switch (a) {
+//     case 3:
+//         console.log( '1' );
+//     case 4:
+//         console.log( '2!' );
+//     case 5:
+//         console.log( '3' );
+//     default:
+//         console.log( '4' );
+// }
+// let a = ''
+// if (!a){
+//     console.log('1')
+// } else { console.log('2')}
