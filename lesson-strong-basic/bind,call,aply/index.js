@@ -125,14 +125,28 @@
 // }
 // console.log(o.f() === o); // true
 //////////////
-var bar = "bar2";
+// var bar = "bar2";
+//
+// function daz(){
+//     var bar = "bar5";
+//     (function maz(){
+//
+//         console.log(this.bar);
+//     })()
+//     // maz();
+// }
+// daz();  // bar2
+////////////////////////
 
-function daz(){
-    var bar = "bar5";
-    (function maz(){
-
-        console.log(this.bar);
-    })()
-    // maz();
+var school ={
+    title: "Oxford",
+    courses: ["JavaScript", "TypeScript", "Java", "Go"],
+    printCourses: function(){
+        console.log(this)
+        this.courses.forEach(function(course){
+            console.log(this)
+            console.log(this.title, course);
+        })
+    }
 }
-daz();  // bar2
+school.printCourses();
