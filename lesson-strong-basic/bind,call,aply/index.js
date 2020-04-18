@@ -138,15 +138,15 @@
 // daz();  // bar2
 ////////////////////////
 
-var school ={
-    title: "Oxford",
-    courses: ["JavaScript", "TypeScript", "Java", "Go"],
-    printCourses: function(){
-        console.log(this)
-        this.courses.forEach(function(course){
-            console.log(this)
-            console.log(this.title, course);
-        })
-    }
+let user = {
+    name: "John",
+    age: 30,
+    isAdmin: true
+};
+
+for (let key in user) {
+    // ключи
+    console.log( key );  // name, age, isAdmin
+    // значения ключей
+    console.log( user[key] ); // John, 30, true
 }
-school.printCourses();
