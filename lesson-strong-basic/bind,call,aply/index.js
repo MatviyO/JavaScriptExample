@@ -138,15 +138,24 @@
 // daz();  // bar2
 ////////////////////////
 
+// let user = {
+//     name: "John",
+//     age: 30,
+//     isAdmin: true
+// };
+//
+// for (let key in user) {
+//     // ключи
+//     console.log( key );  // name, age, isAdmin
+//     // значения ключей
+//     console.log( user[key] ); // John, 30, true
+// }
+//////////////////
 let user = {
     name: "John",
     age: 30,
-    isAdmin: true
+    fi() {console.log(this.name)}
 };
-
-for (let key in user) {
-    // ключи
-    console.log( key );  // name, age, isAdmin
-    // значения ключей
-    console.log( user[key] ); // John, 30, true
-}
+user.fi()
+let my = user
+console.log(my == user)
