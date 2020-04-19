@@ -151,11 +151,18 @@
 //     console.log( user[key] ); // John, 30, true
 // }
 //////////////////
-let user = {
-    name: "John",
-    age: 30,
-    fi() {console.log(this.name)}
-};
-user.fi()
-let my = user
-console.log(my == user)
+// let user = {
+//     name: "John",
+//     age: 30,
+//     fi() {console.log(this.name)}
+// };
+// user.fi()
+// let my = user
+// console.log(my == user)
+let fruits = ["Яблоко"];
+
+fruits.push("Апельсин", "Груша");
+fruits.unshift("Ананас", "Лимон");
+
+// ["Ананас", "Лимон", "Яблоко", "Апельсин", "Груша"]
+alert( fruits );
