@@ -9,20 +9,121 @@
 // console.log(mass)
 //
 //
-function sumSalaries(salaries) {
+// function sumSalaries(salaries) {
+//  let sum = 0;
+//  for (let salary of Object.values(salaries)) {
+//   sum += salary;
+//  }
+//  return sum; // 650
+// }
+// let salaries = {
+//  "John": 100,
+//  "Pete": 300,
+//  "Mary": 250
+// };
+// alert( sumSalaries(salaries) ); // 650
+//
+// const person = {
+//     name: 'link'
+// }
 
- let sum = 0;
- for (let salary of Object.values(salaries)) {
-  sum += salary;
- }
+// function f(phone, email) {
+//     console.log(this.name, phone, email)
+// }
+//
+// let m = f.bind(person, '123', 'email')()
 
- return sum; // 650
+//1
+// function bindd(fn, context, ...rest) {
+//     return fn.bind(context, ...rest)
+// }
+//
+// bindd(f, person, '123', 'email')()
+
+//2
+// const person = {
+//     name: 'link'
+// }
+//
+// function info(phone, email) {
+//     console.log(this.name, phone, email)
+// }
+//
+// function bindd(fn, context, ...rest) {
+//     return function (...args) {
+//         const uniq = Date.now().toString()
+//         context[uniq] = fn
+//         const result = context[uniq](...rest.concat(args))
+//         delete context[uniq]
+//         return result
+//     }
+// }
+// bindd(info, person, '123', 'email')()
+//4
+const person = {
+    name: 'link',
 }
 
-let salaries = {
- "John": 100,
- "Pete": 300,
- "Mary": 250
-};
+function info(phone, email) {
+    console.log(this.name, phone, email)
+}
 
-alert( sumSalaries(salaries) ); // 650
+function bii(fn, context, ...rest) {
+    return function (...args) {
+     return fn.apply(context, rest.concat(args))
+    }
+}
+bii(info, person, '123', 'email')()
+bii(info, person)('123', 'email')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
