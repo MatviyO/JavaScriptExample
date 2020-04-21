@@ -1,20 +1,28 @@
-// let str = 'one. two. three'
 //
-//  let arr = str.split('.')
+// let mass = ["one", "two"]
+// mass.push("three")
+// let k = Math.round((mass.length) / 2)
+// mass[k - 1] = "rock"
+// console.log(k)
+// console.log(mass.shift())
 //
-// console.log(arr)
+// console.log(mass)
+//
+//
+function sumSalaries(salaries) {
 
-// let date = new Date()
+ let sum = 0;
+ for (let salary of Object.values(salaries)) {
+  sum += salary;
+ }
 
-// console.log(date.getHours())
-// console.log(date.getUTCHours())
-// console.log(date)
-// console.log(+date)
-// console.log(date.getTime())
+ return sum; // 650
+}
 
-// let start = new Date()
-// for (let i = 0; i < 100000; i++) {
-//  let doe = i * i;
-// }
-// let end = new Date()
-// console.log(` ${end - start}`)
+let salaries = {
+ "John": 100,
+ "Pete": 300,
+ "Mary": 250
+};
+
+alert( sumSalaries(salaries) ); // 650
