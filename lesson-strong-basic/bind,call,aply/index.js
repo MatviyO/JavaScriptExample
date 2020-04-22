@@ -83,17 +83,36 @@ function info(phone, email) {
 // bi2(info, person)('123', 'email')
 
 //call
-function call(fn, context, ...args) {
-    const uniq = Date.now().toString()
-    context[uniq] = fn
-    const result = context[uniq](...args)
-    delete context[uniq]
-    return result
+// function call(fn, context, ...args) {
+//     const uniq = Date.now().toString()
+//     context[uniq] = fn
+//     const result = context[uniq](...args)
+//     delete context[uniq]
+//     return result
+// }
+// call(info, person, '123', 'email')
+
+//spread
+let city = ['1', '2', '3', '4']
+let cityUer = ['u', 'b','c', 'd']
+
+// const all = [...city, ...cityUer]
+// console.log(all)
+// console.log(...all)
+
+// let cityObj = {
+//     Kiev : 20,
+//     Lviv: 12,
+//     Odesa: 4
+// }
+// console.log({...cityObj})
+
+const numbers = [1,2,3,4,5]
+function f(a, b, ...rest) {
+    console.log(rest)
+    return a + b + rest.reduce( (a, i) => a + i)
 }
-call(info, person, '123', 'email')
-
-
-
+console.log(f(...numbers))
 
 
 
