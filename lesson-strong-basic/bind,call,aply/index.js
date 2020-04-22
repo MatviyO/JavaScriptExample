@@ -63,18 +63,47 @@
 const person = {
     name: 'link',
 }
-
 function info(phone, email) {
     console.log(this.name, phone, email)
 }
+// function bii(fn, context, ...rest) {
+//     return function (...args) {
+//      return fn.apply(context, rest.concat(args))
+//     }
+// }
+// function bi2(fn, context, ...rest) {
+//  return function (...args) {
+//      return fn.call(context, ...rest.concat(args))
+//
+//  }
+// }
+// bii(info, person, '123', 'email')()
+// bii(info, person)('123', 'email')
+// bi2(info, person, '123', 'email')()
+// bi2(info, person)('123', 'email')
 
-function bii(fn, context, ...rest) {
-    return function (...args) {
-     return fn.apply(context, rest.concat(args))
-    }
+//call
+function call(fn, context, ...args) {
+    const uniq = Date.now().toString()
+    context[uniq] = fn
+    const result = context[uniq](...args)
+    delete context[uniq]
+    return result
 }
-bii(info, person, '123', 'email')()
-bii(info, person)('123', 'email')
+call(info, person, '123', 'email')
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
