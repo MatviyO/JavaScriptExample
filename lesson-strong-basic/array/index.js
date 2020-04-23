@@ -93,7 +93,16 @@
 if ([1,2, 3].indexOf(3) >-1) {}
 if (~[1,2, 3].indexOf(3) >-1) {}
 if (!~[1,2, 3].indexOf(3) >-1) {}
+//
+function pow(x, n) {
+    if (n == 1) {
+        return x;
+    } else {
+        return x * pow(x, n - 1);
+    }
+}
 
+alert( pow(2, 3) ); // 8
 
 
 
