@@ -35,15 +35,27 @@
 // sayHi(); // Привет, Вася!
 // setTimeout(sayHi, 1000); // Привет, Вася!
 //1
-let group = {
-    title: "Our Group",
-    students: ["John", "Pete", "Alice"],
+// let group = {
+//     title: "Our Group",
+//     students: ["John", "Pete", "Alice"],
+//
+//     showList() {
+//         this.students.forEach(
+//             student => alert(this.title + ': ' + student)
+//         );
+//     }
+// };
+// group.showList();
 
-    showList() {
-        this.students.forEach(
-            student => alert(this.title + ': ' + student)
-        );
+let user = {
+    name: 'len',
+    surname: 'kok',
+    get fullname() {
+        return this.name + this.surname
+    },
+    set fullname(value) {
+        [this.name, this.surname] = value.split(" ")
     }
-};
-
-group.showList();
+}
+user.fullname = "alice non"
+console.log(user.name)
