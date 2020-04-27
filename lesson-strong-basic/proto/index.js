@@ -1,21 +1,34 @@
-const person =  {
-    name: 'Maxim',
-        age: 25,
-        greet: function () {
-        console.log('greet')
-    }
-}
+// const person = { name: 'jpn'}
+// console.log(person)
+// function f() {
+//     console.log('name')
+// }
+// f()
 
-const person1 = new Object({
-    name: 'Maxim',
-    age: 25,
-    greet: function () {
-        console.log('greet')
-    }
-})
-
-Object.prototype.sayHello = function () {
-    console.log('hello')
+// var stalin = {
+//     gulag: true,
+//     mustache: true,
+//     hero: 1
+// }
+// var lenin = {
+//     baldHead: true,
+//     armand: false,
+//     criticalImperialism: true
+// }
+// stalin.__proto__ = lenin;
+// for (let key in stalin) {
+//     if (stalin.hasOwnProperty(key)) console.log(key + ": " + stalin[key])
+// }
+// console.log(stalin.baldHead);  //  true
+// console.log(stalin)
+var marks = {
+    marxism: true,
+    engels: "friend",
+    beard: 80
 }
-const lena = Object.create(person)
-lena.name = 'elena'
+function f(name) {
+    this._name = name
+    this.__proto__ = marks;
+}
+let k = new f('nike')
+console.log(k)
