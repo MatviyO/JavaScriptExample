@@ -21,14 +21,24 @@
 // }
 // console.log(stalin.baldHead);  //  true
 // console.log(stalin)
-var marks = {
-    marxism: true,
-    engels: "friend",
-    beard: 80
-}
-function f(name) {
-    this._name = name
-    this.__proto__ = marks;
-}
-let k = new f('nike')
-console.log(k)
+// var marks = {
+//     marxism: true,
+//     engels: "friend",
+//     beard: 80
+// }
+// function f(name) {
+//     this._name = name
+//     this.__proto__ = marks;
+// }
+// let k = new f('nike')
+// console.log(k)
+// function f(n) {
+//  return function() {
+//     console.log(1000 * n )
+//  }
+// }
+//
+// const calc = f(42)
+// calc()
+// const m = f(52)
+// m()
