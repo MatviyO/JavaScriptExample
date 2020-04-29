@@ -42,3 +42,35 @@
 // calc()
 // const m = f(52)
 // m()
+
+// function f() {
+//     alert("Hello!");
+// }
+// Function.prototype.defer = function(ms) {
+//     setTimeout(this, ms)
+// }
+// f.defer(1000); // выведет "Hello!" через 1 секунду
+let animal = {
+    eats: true
+}
+let rabbit = Object.create(animal)
+console.log(rabbit)
+console.log(Object.getPrototypeOf(rabbit))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
