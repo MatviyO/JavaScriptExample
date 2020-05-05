@@ -85,7 +85,7 @@ function createCar(model: string, year: number): Car {
     return car as Car
 }
 
-//===
+//=======
 
 const cars: Array<string> = ['ford', 'audi']
 
