@@ -1,0 +1,3 @@
+module.exports = `
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, ipsum, quo. Consequuntur deserunt error nostrum quisquam veritatis! Amet doloribus laboriosam, nemo numquam obcaecati odit quisquam ut vitae. Ab, corporis cumque cupiditate ea eos est eum exercitationem ipsum molestiae nisi provident sed temporibus! A ad alias aliquid atque consequatur corporis culpa distinctio dolorem doloremque, dolorum eos esse excepturi explicabo fugiat hic illo in, ipsum iste labore laudantium minima minus necessitatibus nesciunt nulla numquam officia officiis optio possimus qui quod recusandae reiciendis repellendus reprehenderit, sint tempora tenetur velit? Ad aut cum debitis delectus error eveniet fuga fugiat, harum molestias quibusdam reiciendis veniam?
+`
